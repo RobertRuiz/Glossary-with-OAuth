@@ -1,0 +1,24 @@
+<h2>Signup now and we shall reveal ...</h2>
+<h3> The Powerball numbers for next drawing!
+  <br>
+  <br>
+  or may be just a great and useful Glossary of tech terms
+  <br>
+  <br>
+</h3>
+
+<%= form_for(@user) do |f| %>
+  Name: <br><%= f.text_field :name %>
+  <br>
+  <br>
+  Email: <br><%= f.text_field :email %>
+  <br>
+  <br>
+  Password (6 characters minimum): <br><%= f.password_field :password %>
+  <br>
+  <br>
+  Confirm password (same as above): <br><%= f.password_field :password_confirmation %>
+  <br>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>

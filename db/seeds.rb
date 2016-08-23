@@ -1,3 +1,12 @@
+ActiveRecord::Base.establish_connection
+ActiveRecord::Base.connection.tables.each do |table|
+  next if table == 'schema_migrations'
+
+  # MySQL and PostgreSQL
+  ActiveRecord::Base.connection.execute("TRUNCATE #{table}")
+
+end
+
 Category.create(name: "Front End Engineering",
                 subject: "Javascript")
 
