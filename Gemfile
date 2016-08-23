@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Bootstrap
+gem "font-awesome-rails"
+gem 'bootstrap-social-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 
