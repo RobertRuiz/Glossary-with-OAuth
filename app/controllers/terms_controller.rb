@@ -1,6 +1,6 @@
 class TermsController < ApplicationController
   before_action :set_term, only: [:show, :edit, :update, :destroy]
-  # before_action :authorize!
+  before_action :authenticate!
 
   # GET /terms
   # GET /terms.json
