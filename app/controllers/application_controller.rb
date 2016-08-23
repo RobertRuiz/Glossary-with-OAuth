@@ -5,12 +5,9 @@ end
 class ApplicationController < ActionController::Base
   # Returns the current use if logged in
   def current_user
-    if session[:user_id]
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
-      # if session[:expires_at] && session[:expires_at] < Time.now
-      #   session[:expires_at] = 1.hour.from_now
-      # end
-    end
+    # if session[:user_id]
+    #   @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    # end
   end
   helper_method :current_user
 
@@ -23,5 +20,10 @@ class ApplicationController < ActionController::Base
   # Method to use in a filter to ensure the user is logged in
   def authorize!
     redirect_to login_path unless logged_in?
+  end
+
+  # Assign the current user
+  def current_user=(user)
+    session[:user_id] = user.id
   end
 end
