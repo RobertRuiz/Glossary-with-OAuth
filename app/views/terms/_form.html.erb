@@ -11,29 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <%= f.text_field :name, class: "form-control input-lg" %>
+   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :definition %>
-    <%= f.text_field :definition %>
+    <%= f.text_field :definition, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.text_field :author, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :web_link %>
-    <%= f.text_field :web_link %>
+    <%= f.text_field :web_link, class: "form-control" %>
   </div>
+
+  <div class="form-group field">
+    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)  %>
+    <%= category.label { category.check_box } %>
+   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
-
-</div>

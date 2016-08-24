@@ -7,7 +7,6 @@ Category.create(name: "Back End Engineering",
 Term.create(name: "Active record",
             definition: "an ORM for ruby",
             author: "David Heinemeier Hansson",
-            category_id: 2,
             web_link: "http://goo.gl/dbXsUX")
 
 Term.create(name: "Modules",
@@ -19,7 +18,6 @@ Term.create(name: "Modules",
 Term.create(name: "Ruby Tk",
             definition: "a graphical user interface (GUI) for Ruby",
             author: "David Heinemeier Hansson",
-            category_id: 2,
             web_link: "http://goo.gl/JD1zMe")
 
 Term.create(name: "Strings",
@@ -31,11 +29,9 @@ Term.create(name: "Strings",
 Term.create(name: "Classes",
             definition: "Classes are a template to create many objects with similar qualities",
             author: "MDN Mozilla Developer Network",
-            category_id: 1,
             web_link: "https://goo.gl/4yX6jM")
 
 Term.create(name: "Ternary Operator",
             definition: "The ternary operator is usually used as a shortcut for the if statement",
             author: "MDN Mozilla Developer Network",
-            category_id: 1,
             web_link: "https://goo.gl/zdZXj")
